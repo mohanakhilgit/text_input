@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block body %}
+
+<div class="container my-5">
+    <form action="{% url 'website:display' %}" method="post">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label class="form-label">Enter Your Text</label>
+            <textarea class="form-control" name="txt_input" rows="7" placeholder="Type something.."></textarea>
+            <button class="btn btn-primary my-2" type="submit">Proceed</button>
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Display
+{% endblock %}
+
+{% block body %}
+
+<div class="container shadow" style="margin: 8%; padding: 10%;">
+
+    <h5>{{ text }}</h5>
+    <hr>
+    <div class="text-center" >
+    <a href="{% url 'website:home' %}">Return to Home</a>
+    </div>
+    
+</div>
+
+{% endblock %}
